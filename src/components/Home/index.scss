@@ -1,0 +1,132 @@
+.home-page {
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* Ensure space between text and logo */
+  align-items: center; /* Center items vertically */
+  height: 100vh; /* Full viewport height */
+  padding: 20px; /* Optional padding */
+
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 90%;
+
+    h1 {
+      color: #fff;
+      font-size: 56px;
+      line-height: 63px;
+      margin: 0;
+      font-family: 'Coolvetica';
+      font-weight: 400;
+
+      &:before {
+        content: '<h1>';
+        font-family: 'La Belle Aurore', cursive;
+        color: #00ff7f;
+        font-size: 18px;
+        position: absolute;
+        margin-top: -40px;
+        left: -15px;
+        opacity: 0.9;
+      }
+
+      &:after {
+        content: '<h1/>';
+        font-family: 'La Belle Aurore', cursive;
+        color: #00ff7f;
+        font-size: 18px;
+        position: absolute;
+        margin-top: 18px;
+        margin-left: 20px;
+        animation: fadeIn 1s 1.7s backwards;
+        opacity: 0.9;
+      }
+    }
+
+    h2 {
+      color: #8d8d8d;
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 11px;
+      font-family: sans-serif;
+      letter-spacing: 3px;
+      animation: fadeIn 1s 1.8s backwards;
+    }
+
+    .flat-button {
+      color: #00ff7f;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      font-family: sans-serif;
+      text-decoration: none;
+      padding: 10px 18px;
+      border: 1px solid #00ff7f;
+      margin-top: 25px;
+      animation: fadeInAnimation 1s 1.8s backwards;
+      white-space: nowrap;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background: #00ff7f;
+        color: rgb(0, 0, 0);
+      }
+    }
+  }
+
+  .logo-container {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .logo-right {
+    width: 40vw; /* Responsive width based on viewport width */
+    max-width: 800px; /* Maximum width */
+    height: auto;
+  }
+
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    justify-content: center; /* Center items vertically */
+
+    .text-zone {
+      width: 80%; /* Take most of the width on smaller screens */
+      text-align: center; /* Center text */
+      position: static;
+      transform: none; /* Reset transform */
+      margin: 0 auto; /* Center horizontally */
+    }
+
+    .logo-container {
+      width: 80%; /* Adjust width for smaller screens */
+      justify-content: center; /* Center logo horizontally */
+      position: static; /* Reset position */
+      margin: 20px auto; /* Center horizontally with margin */
+      transform: none; /* Reset transform */
+    }
+
+    .logo-right {
+      width: 60vw; /* Adjust width for smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .text-zone {
+      width: 90%; /* Take most of the width on very small screens */
+    }
+
+    .logo-container {
+      width: 90%; /* Adjust width for very small screens */
+    }
+
+    .logo-right {
+      width: 70vw; /* Adjust width for very small screens */
+    }
+  }
+}
