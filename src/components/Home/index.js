@@ -42,7 +42,7 @@ const Home = () => {
             />
           </h1>
           <h2>
-            Emotional chatbot/ using GPT 2/ Human-like bot
+            Emotional chatbot/ using GPT 3/ Human-like bot
           </h2>
           <br></br>
           <div className="button-container">
