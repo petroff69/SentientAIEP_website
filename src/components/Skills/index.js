@@ -3,6 +3,7 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import WordCloud from './wordcloud'
+import 'bootstrap/dist/css/bootstrap.min.css'  // Import Bootstrap
 
 const Skills = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -28,22 +29,27 @@ const Skills = () => {
             />
             <br />
           </h1>
-          <div class="container">
-    <div class="row">
-      <div class="col-12 mb-3">
-        <a href="https://sentient-image-prototype.vercel.app/" class="btn btn-success btn-lg btn-block">Sentient Image AI Recognition</a>
-      </div>
-      <div class="col-12 mb-3">
-        <a href="https://sentient-two-prompted-prototype.vercel.app/" class="btn btn-success btn-lg btn-block">Sentient Two Prompted Chatbot</a>
-      </div>
-      <div class="col-12 mb-3">
-        <a href="https://sentient-voice-recognition-ai.vercel.app/" class="btn btn-success btn-lg btn-block">Sentient Voice Assistant AI</a>
-      </div>
-    </div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+          {/* Button Group */}
+          <div className="container">
+            <div className="row">
+              <div className="col-12 mb-3">
+                <a href="https://sentient-image-prototype.vercel.app/" className="btn btn-success btn-lg btn-block">
+                  Sentient Image AI Recognition
+                </a>
+              </div>
+              <div className="col-12 mb-3">
+                <a href="https://sentient-two-prompted-prototype.vercel.app/" className="btn btn-success btn-lg btn-block">
+                  Sentient Two Prompted Chatbot
+                </a>
+              </div>
+              <div className="col-12 mb-3">
+                <a href="https://sentient-voice-recognition-ai.vercel.app/" className="btn btn-success btn-lg btn-block">
+                  Sentient Voice Assistant AI
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="tagcloud-wrap">
