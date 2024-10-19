@@ -28,9 +28,22 @@ const Skills = () => {
             />
             <br />
           </h1>
-          <button type="button" class="btn btn-success btn-lg btn-block" href="https://sentient-image-prototype.vercel.app/">Sentient Image AI Recognition</button>
-          <button type="button" class="btn btn-success btn-lg btn-block" href="https://sentient-two-prompted-prototype.vercel.app/">Sentient Two Prompted Chatbot</button>
-          <button type="button" class="btn btn-success btn-lg btn-block" href="https://sentient-voice-recognition-ai.vercel.app/">Sentient Voice Assistant AI</button>
+          <div class="container">
+    <div class="row">
+      <div class="col-12 mb-3">
+        <a href="https://sentient-image-prototype.vercel.app/" class="btn btn-success btn-lg btn-block">Sentient Image AI Recognition</a>
+      </div>
+      <div class="col-12 mb-3">
+        <a href="https://sentient-two-prompted-prototype.vercel.app/" class="btn btn-success btn-lg btn-block">Sentient Two Prompted Chatbot</a>
+      </div>
+      <div class="col-12 mb-3">
+        <a href="https://sentient-voice-recognition-ai.vercel.app/" class="btn btn-success btn-lg btn-block">Sentient Voice Assistant AI</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
         </div>
 
         <div className="tagcloud-wrap">
