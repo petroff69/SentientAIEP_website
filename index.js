@@ -1,46 +1,141 @@
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-import WordCloud from './wordcloud'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
-const Skills = () => {
+const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-
-  const skillsArray = 'Skills'.split('')
+  const form = useRef()
+  const contactArray = 'Contact Me'.split('')
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    return setTimeout(() => {
       setLetterClass('text-animate-hover')
-    }, 2000)
-    return () => clearTimeout(timer)
+    }, 3000)
   }, [])
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMIAL_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          // alert('Message successfully sent!')
+          toast.success('Message successfully sent!', {
+            position: 'bottom-center',
+            autoClose: 3500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'dark',
+          })
+          const timeout = setTimeout(() => {
+            window.location.reload(false)
+          }, 3900)
+
+          return () => clearTimeout(timeout)
+        },
+        () => {
+          // alert('Failed to send the message, please try again')
+          toast.error('Failed to send the message, please try again', {
+            position: 'bottom-center',
+            autoClose: 3500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'dark',
+          })
+        }
+      )
+  }
 
   return (
     <>
-      <div className="container skills-page">
+      <div className="container contact-page">
         <div className="text-zone">
           <h1>
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={skillsArray}
+              strArray={contactArray}
               idx={15}
             />
-            <br />
           </h1>
-          <button type="button" class="btn btn-success btn-lg btn-block" href="https://sentient-image-prototype.vercel.app/">Sentient Image AI Recognition</button>
-          <button type="button" class="btn btn-success btn-lg btn-block" href="https://sentient-two-prompted-prototype.vercel.app/">Sentient Two Prompted Chatbot</button>
-          <button type="button" class="btn btn-success btn-lg btn-block" href="https://sentient-voice-recognition-ai.vercel.app/">Sentient Voice Assistant AI</button>
+          <p>
+            I am interested in opportunities - especially ambitious or large
+            projects. However, if you have other request or question, don't
+            hesitate to contact me using below form either.
+          </p>
+          <div className="contact-form">
+            <form ref={form} onSubmit={sendEmail}>
+              <ul>
+                <li className="half">
+                  <input placeholder="Name" type="text" name="name" required />
+                </li>
+                <li className="half">
+                  <input
+                    placeholder="Email"
+                    type="email"
+                    name="email"
+                    required
+                  />
+                </li>
+                <li>
+                  <input
+                    placeholder="Subject"
+                    type="text"
+                    name="subject"
+                    required
+                  />
+                </li>
+                <li>
+                  <textarea
+                    placeholder="Message"
+                    name="message"
+                    required
+                  ></textarea>
+                </li>
+                <li>
+                  <input type="submit" className="flat-button" value="SEND" />
+                </li>
+              </ul>
+              <ToastContainer />
+            </form>
+          </div>
         </div>
-
-        <div className="tagcloud-wrap">
-          <WordCloud />
+        <div className="info-map">
+          Zlatimir Petrov
+          <br />
+          Varna, <br />
+          Bulgaria
+          <br />
+        </div>
+        <div className="map-wrap">
+          <MapContainer center={[43.2546, 28.0241]} zoom={13}>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker position={[43.2546, 28.0241]}>
+              <Popup>Feel free to ask :)</Popup>
+            </Marker>
+          </MapContainer>
         </div>
       </div>
-
       <Loader type="pacman" />
     </>
   )
 }
 
-export default Skills
+export default Contact
