@@ -28,12 +28,9 @@ const Skills = () => {
             />
             <br />
           </h1>
-          <p>
-          Current AI systems excel at logical and data-driven tasks, but they often falter when it comes to understanding the emotional states of their users. They can detect basic sentiments like happiness or anger but fail to grasp the complexity of human emotions. Additionally, these systems lack self-awareness; they cannot adapt their responses based on past interactions or the emotional nuances of a conversation.
-          </p>
-          <p>
-          Sentient AI seeks to bridge this gap by creating machines that can understand, recognize, and respond to human emotions in a way that feels genuinely empathetic. We are developing an AI bot that doesn't just respond based on pre-programmed logic but adapts and reacts with genuine empathy. Imagine interacting with a chatbot that not only listens to your words but also understands the feelings behind them, offering responses that are comforting, supportive, and contextually appropriate.
-          </p>
+          <button type="button" class="btn btn-success btn-lg btn-block" href="https://sentient-image-prototype.vercel.app/">Sentient Image AI Recognition</button>
+          <button type="button" class="btn btn-success btn-lg btn-block" href="https://sentient-two-prompted-prototype.vercel.app/">Sentient Two Prompted Chatbot</button>
+          <button type="button" class="btn btn-success btn-lg btn-block" href="https://sentient-voice-recognition-ai.vercel.app/">Sentient Voice Assistant AI</button>
         </div>
 
         <div className="tagcloud-wrap">

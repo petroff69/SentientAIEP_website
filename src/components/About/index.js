@@ -38,16 +38,15 @@ const About = () => {
             />
           </h1>
           <p>
-          Humans have feelings. Robots supposedly do not. But what if we show you our bot which can feel emotions and chat with you like an actual human being? Welcome to the frontier of sentient artificial intelligence. 
+           Sentient AIEP deals with creating conscious AI by using prototypes and methodologies that may lead to the AI becoming self-aware.
+           This approach involves controlled and uncontrolled training methods that enable effective communication between humans and machines.
+           Artificial intelligence is an AI system combining NLP’s power and voice interaction, allowing the users to speak with AI. 
           </p>
           <p>
-          Emotions are at the core of human interactions. They influence our decisions, shape our relationships, and drive our behaviors. For years, artificial intelligence has been advancing, yet it remains fundamentally detached from the emotional nuances that define human experience. 
+           The next task that AIEP performs includes image recognition.   The user uploads any image and the AI analyzes its content. Finally, another AI model uses two subprompts, where the first one involves asking the main task and the other offers additional information or guidance to receive a more precise answer; this approach allows AI to be case-sensitive in more diverse situations and scenarios. 
           </p>
           <p>
-          The developers of this chatbot are Vanisha Kheterpal and Zlatimir Petrov.
-          </p>
-          <p>
-          Our journey into Sentient AI was part of the 3-week long Summer Research School in Varna, Bulgaria, from July 21st to August 10th, 2024. 
+           In the "Sentient AIEP" project, my contribution is focused on developing prototypes in the field of sentient artificial intelligence by integrating various technologies that enable AI to tackle challenges flexibly and adaptively, such as image recognition and engaging in meaningful communication.
           </p>
         </div>
 

@@ -118,7 +118,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="info-map">
-          Zlatimir Petrov & Vanisha
+          Zlatimir Petrov
           <br />
           Varna, <br />
           Bulgaria
