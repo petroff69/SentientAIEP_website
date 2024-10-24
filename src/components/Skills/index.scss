@@ -8,9 +8,8 @@
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
   position: absolute;
-  left: 10%; /* Move the buttons to the left side */
-  top: 30%; /* Adjust as necessary for vertical placement */
-  z-index: 2; /* Ensure buttons are above other content */
+  left: 20%; /* Move the buttons to the left side */
+  margin: 0 auto;
 }
 
 .custom-btn {
