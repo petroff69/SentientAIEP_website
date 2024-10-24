@@ -53,7 +53,6 @@ const Home = () => {
             >
               DOWNLOAD THE RESEARCH PAPER
             </a>
-            <br></br>
             <a
               href="https://github.com/petroff69/Sentient-AI-Experimental-Prototype"
               className="flat-button"
