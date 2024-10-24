@@ -28,7 +28,6 @@ const Skills = () => {
             />
             <br />
           </h1>
-         </div>
   
           {/* Custom Button Group */}
           <div className="button-container">
@@ -42,7 +41,7 @@ const Skills = () => {
               Sentient Voice Assistant AI
             </a>
           </div>
-        
+  </div>
 
         <div className="tagcloud-wrap">
           <WordCloud />
