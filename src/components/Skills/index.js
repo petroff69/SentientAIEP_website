@@ -28,7 +28,8 @@ const Skills = () => {
             />
             <br />
           </h1>
-
+         </div>
+  
           {/* Custom Button Group */}
           <div className="button-container">
             <a href="https://sentient-image-prototype.vercel.app/" className="custom-btn">
@@ -41,7 +42,7 @@ const Skills = () => {
               Sentient Voice Assistant AI
             </a>
           </div>
-        </div>
+        
 
         <div className="tagcloud-wrap">
           <WordCloud />
