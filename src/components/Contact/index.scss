@@ -1,19 +1,3 @@
-.contact-page {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Ensures that elements don’t overflow */
-}
-
-.text-zone {
-  width: 45%;
-  padding-right: 20px; /* Add padding to create space between text and map */
-}
-
-.map-wrap {
-  width: 50%; /* Adjust the width to fit the layout */
-  height: 100%; /* Make sure the height is set appropriately */
-  background: rgba(8, 253, 216, 0.1);
-}
 
 .contact-form {
   width: 100%;
@@ -97,9 +81,18 @@
   }
 }
 
+.map-wrap {
+  background: rgba(8, 253, 216, 0.1);
+  float: right;
+  width: 53%;
+  height: 115%;
+  margin-top: -3%;
+}
+
 .leaflet-container {
+  position: relative;
   width: 100%;
-  height: 100%; /* Ensure the map takes up full height */
+  height: 100%;
   opacity: 0;
   animation: backInRight 1s 1.2s;
   animation-fill-mode: forwards;
@@ -129,4 +122,31 @@
       color: #ffd700;
     }
   }
+}
+
+.contact-page {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.text-zone {
+  width: 45%;
+  padding-right: 20px;
+}
+
+.map-wrap {
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form ul li.half {
+  width: 48%;
+  float: left;
 }
